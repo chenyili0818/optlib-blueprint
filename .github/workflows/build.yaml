@@ -25,9 +25,7 @@ jobs:
           lfs: true
 
       - run: |
-          nix develop --command make blueprint
-          make analyze
-          make serve
+          nix develop && make analyze && make serve
 
       - name: Fix permissions
         run: |
