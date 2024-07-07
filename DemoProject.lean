@@ -1,3 +1,3 @@
--- This module serves as the root of the `DemoProject` library.
+-- This module serves as the root of the `Convex` library.
 -- Import modules here that should be built as part of the library.
-import «DemoProject».Basic
+import «Convex».Basic

@@ -26,6 +26,8 @@ jobs:
 
       - run: |
           nix develop --command make blueprint
+          make analyze
+          make serve
 
       - name: Fix permissions
         run: |

@@ -100,5 +100,5 @@
    "inputRev": "main",
    "inherited": false,
    "configFile": "lakefile.lean"}],
- "name": "DemoProject",
+ "name": "Convex",
  "lakeDir": ".lake"}
