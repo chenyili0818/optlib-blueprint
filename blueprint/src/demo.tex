@@ -1,33 +1,2631 @@
 
-\begin{theorem}\label{List.aux}
+\begin{definition}\label{DescentDirection}
         \leanok
-        \lean{List.aux}
-                this should be a doc string.
+        \lean{DescentDirection}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{optimal_no_descent_direction}
+        \leanok
+        \lean{optimal_no_descent_direction}
+        \uses{DescentDirection,continuous,expansion}
+                No documentation.
     \end{theorem}
 
 \begin{proof}
     \leanok
 \end{proof}
 
-\begin{theorem}\label{List.Nat.Ex}
+\begin{theorem}\label{first_order_unconstrained}
         \leanok
-        \lean{List.Nat.Ex}
-        \uses{List.aux}
-                Here is a doc string
+        \lean{first_order_unconstrained}
+        \uses{DescentDirection,optimal_no_descent_direction}
+                No documentation.
     \end{theorem}
 
 \begin{proof}
     \leanok
 \end{proof}
 
-\begin{theorem}\label{List.test}
-        \lean{List.test}
+\begin{theorem}\label{first_order_convex}
+        \leanok
+        \lean{first_order_convex}
+        \uses{Convex_first_order_condition,Convex_first_order_condition',continuous}
                 No documentation.
     \end{theorem}
 
-\begin{theorem}\label{List.Test}
-        \lean{List.Test}
-        \uses{List.test}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{first_order_convex_iff}
+        \leanok
+        \lean{first_order_convex_iff}
+        \uses{first_order_unconstrained,first_order_convex}
                 No documentation.
     \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{Nesterov_first}
+        \leanok
+        \lean{Nesterov_first}
+        \uses{Nesterov,prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{Nesterov_first_converge}
+        \leanok
+        \lean{Nesterov_first_converge}
+        \uses{Nesterov_first,Nesterov_first_fix_stepsize,Nesterov,HasSubgradientAt,SubderivAt,mem_SubderivAt,prox_iff_subderiv,Convex_first_order_condition,Convex_first_order_condition'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{Nesterov_first_fix_stepsize}
+        \leanok
+        \lean{Nesterov_first_fix_stepsize}
+        \uses{Nesterov_first,Nesterov,prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{Nesterov_first_fix_stepsize_converge}
+        \leanok
+        \lean{Nesterov_first_fix_stepsize_converge}
+        \uses{Nesterov_first,Nesterov_first_converge,Nesterov_first_fix_stepsize,Nesterov}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{Nesterov}
+        \leanok
+        \lean{Nesterov}
+                No documentation.
+    \end{definition}
+
+\begin{lemma}\label{one_iter}
+        \leanok
+        \lean{one_iter}
+        \uses{Convex_first_order_condition,Convex_first_order_condition'}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{nesterov_algorithm_smooth}
+        \leanok
+        \lean{nesterov_algorithm_smooth}
+        \uses{one_iter}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{dot_mul_eq_transpose_mul_dot}
+        \leanok
+        \lean{dot_mul_eq_transpose_mul_dot}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{mulVec_sub}
+        \leanok
+        \lean{mulVec_sub}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{norm2eq_dot}
+        \leanok
+        \lean{norm2eq_dot}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{real_inner_eq_dot}
+        \leanok
+        \lean{real_inner_eq_dot}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{quadratic_gradient}
+        \leanok
+        \lean{quadratic_gradient}
+        \uses{dot_mul_eq_transpose_mul_dot,mulVec_sub,norm2eq_dot,HasGradient_iff_Convergence_Point,HasGradient_iff_Convergence}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{affine_sq_gradient}
+        \leanok
+        \lean{affine_sq_gradient}
+        \uses{mulVec_sub,norm2eq_dot,quadratic_gradient,HasGradientAt.add,HasGradientAt.add_const,HasGradientAt.sub,HasGradientAt.const_mul,HasGradientAt.const_mul'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{affine_sq_convex}
+        \leanok
+        \lean{affine_sq_convex}
+        \uses{dot_mul_eq_transpose_mul_dot,mulVec_sub,norm2eq_dot,real_inner_eq_dot,affine_sq_gradient,monotone_gradient_convex',monotone_gradient_convex}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{norm_one_convex}
+        \leanok
+        \lean{norm_one_convex}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{real_sign_mul_abs}
+        \leanok
+        \lean{real_sign_mul_abs}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{norm_one_proximal
+}
+        \leanok
+        \lean{norm_one_proximal
+}
+        \uses{norm_one_convex,real_sign_mul_abs,HasSubgradientAt,SubderivAt,mem_SubderivAt,SubderivAt_abs,prox_prop,prox_iff_subderiv,prox_iff_subderiv_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{Transpose_mul_self_eq_zero}
+        \leanok
+        \lean{Transpose_mul_self_eq_zero}
+        \uses{LASSO}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{LASSO}
+        \leanok
+        \lean{LASSO}
+        \uses{mulVec_sub,affine_sq_gradient,affine_sq_convex,norm_one_convex,norm_one_proximal
+,Transpose_mul_self_eq_zero,proximal_gradient_method,gradient_method,prox_prop,ContinuousAt_iff_Convergence,continuous}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{LASSO_converge}
+        \leanok
+        \lean{LASSO_converge}
+        \uses{LASSO,proximal_gradient_method,proximal_gradient_method_converge,gradient_method}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{bounded_subgradient_to_Lipschitz
+}
+        \leanok
+        \lean{bounded_subgradient_to_Lipschitz
+}
+        \uses{SubderivAt,SubderivAt.nonempty}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Lipschitz_to_bounded_subgradient}
+        \leanok
+        \lean{Lipschitz_to_bounded_subgradient}
+        \uses{SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{bounded_subgradient_iff_Lipschitz}
+        \leanok
+        \lean{bounded_subgradient_iff_Lipschitz}
+        \uses{Lipschitz_to_bounded_subgradient,SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{subgradient_method}
+        \leanok
+        \lean{subgradient_method}
+        \uses{gradient_method,SubderivAt}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{subgradient_method_converge}
+        \leanok
+        \lean{subgradient_method_converge}
+        \uses{Lipschitz_to_bounded_subgradient,subgradient_method,gradient_method,SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{subgradient_method_fix_step_size}
+        \leanok
+        \lean{subgradient_method_fix_step_size}
+        \uses{subgradient_method,subgradient_method_converge,gradient_method}
+                convergence with fixed step size -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{subgradient_method_fixed_distance}
+        \leanok
+        \lean{subgradient_method_fixed_distance}
+        \uses{Lipschitz_to_bounded_subgradient,subgradient_method,gradient_method}
+                convergence with fixed $‖x^{i+1}-x^{i}‖$ -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{subgradient_method_diminishing_step_size
+}
+        \leanok
+        \lean{subgradient_method_diminishing_step_size
+}
+        \uses{subgradient_method,subgradient_method_converge,gradient_method}
+                convergence with diminishing step size -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{proximal_gradient_method}
+        \leanok
+        \lean{proximal_gradient_method}
+        \uses{gradient_method,prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{proximal_gradient_method_converge}
+        \leanok
+        \lean{proximal_gradient_method_converge}
+        \uses{proximal_gradient_method,gradient_method,HasSubgradientAt,SubderivAt,mem_SubderivAt,prox_prop,prox_point,prox_unique_of_convex,prox_point_c,prox_point_c',prox_iff_subderiv,prox_iff_subderiv_smul,Convex_first_order_condition,Convex_first_order_condition'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{Nesterov_second}
+        \leanok
+        \lean{Nesterov_second}
+        \uses{Nesterov,prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{Nesterov_second_convergence}
+        \leanok
+        \lean{Nesterov_second_convergence}
+        \uses{Nesterov,Nesterov_second,Nesterov_second_fix_stepsize,HasSubgradientAt,SubderivAt,mem_SubderivAt,SubderivAt.pos_smul,prox_iff_subderiv,Convex_first_order_condition,Convex_first_order_condition'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{Nesterov_second_fix_stepsize}
+        \leanok
+        \lean{Nesterov_second_fix_stepsize}
+        \uses{Nesterov,Nesterov_second,prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{Nesterov_second_fix_stepsize_converge}
+        \leanok
+        \lean{Nesterov_second_fix_stepsize_converge}
+        \uses{Nesterov,Nesterov_second,Nesterov_second_convergence,Nesterov_second_fix_stepsize}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Strong_convex_Lipschitz_smooth}
+        \leanok
+        \lean{Strong_convex_Lipschitz_smooth}
+        \uses{lipschitz_to_lnorm_sub_convex,convex_to_lower,lipschitz_to_lower,Strong_Convex_lower,sub_normsquare_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{lipschitz_derivxm_eq_zero}
+        \leanok
+        \lean{lipschitz_derivxm_eq_zero}
+        \uses{Gradient_Descent_fix_stepsize,lipschitz_minima_lower_bound}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_method_strong_convex}
+        \leanok
+        \lean{gradient_method_strong_convex}
+        \uses{Strong_convex_Lipschitz_smooth,lipschitz_derivxm_eq_zero,gradient_method}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{mono_sum_prop_primal}
+        \leanok
+        \lean{mono_sum_prop_primal}
+        \uses{mono_sum_prop}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{mono_sum_prop_primal'}
+        \leanok
+        \lean{mono_sum_prop_primal'}
+        \uses{mono_sum_prop_primal,mono_sum_prop}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{mono_sum_prop}
+        \leanok
+        \lean{mono_sum_prop}
+        \uses{mono_sum_prop_primal,mono_sum_prop_primal'}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{GradientDescent}
+        \leanok
+        \lean{GradientDescent}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{Gradient_Descent_fix_stepsize}
+        \leanok
+        \lean{Gradient_Descent_fix_stepsize}
+        \uses{GradientDescent}
+                No documentation.
+    \end{definition}
+
+\begin{lemma}\label{convex_function}
+        \leanok
+        \lean{convex_function}
+        \uses{Convex_first_order_condition,Convex_first_order_condition'}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{convex_lipschitz}
+        \leanok
+        \lean{convex_lipschitz}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{point_descent_for_convex}
+        \leanok
+        \lean{point_descent_for_convex}
+        \uses{convex_function,convex_lipschitz}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_method}
+        \leanok
+        \lean{gradient_method}
+        \uses{mono_sum_prop,convex_lipschitz,point_descent_for_convex}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{Banach_HasSubgradientAt}
+        \leanok
+        \lean{Banach_HasSubgradientAt}
+        \uses{HasSubgradientAt}
+                Subgradient of functions -
+    \end{definition}
+
+\begin{definition}\label{Banach_HasSubgradientWithinAt}
+        \leanok
+        \lean{Banach_HasSubgradientWithinAt}
+        \uses{HasSubgradientWithinAt}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{Banach_SubderivAt}
+        \leanok
+        \lean{Banach_SubderivAt}
+        \uses{Banach_HasSubgradientAt,HasSubgradientAt,SubderivAt}
+                Subderiv of functions -
+    \end{definition}
+
+\begin{definition}\label{Banach_SubderivWithinAt}
+        \leanok
+        \lean{Banach_SubderivWithinAt}
+        \uses{Banach_HasSubgradientWithinAt,HasSubgradientWithinAt,SubderivWithinAt}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{Epi}
+        \leanok
+        \lean{Epi}
+                No documentation.
+    \end{definition}
+
+\begin{lemma}\label{EpigraphInterior_existence}
+        \leanok
+        \lean{EpigraphInterior_existence}
+        \uses{Epi,continuous}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{mem_epi_frontier}
+        \leanok
+        \lean{mem_epi_frontier}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Banach_SubderivWithinAt.Nonempty}
+        \leanok
+        \lean{Banach_SubderivWithinAt.Nonempty}
+        \uses{Banach_SubderivWithinAt,Epi,EpigraphInterior_existence,SubderivWithinAt,SubderivWithinAt.Nonempty,continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Quasiconvex_first_order_condition_right}
+        \leanok
+        \lean{Quasiconvex_first_order_condition_right}
+        \uses{HasFDeriv_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{HasSubgradientAt}
+        \leanok
+        \lean{HasSubgradientAt}
+                Subgradient of functions -
+    \end{definition}
+
+\begin{definition}\label{HasSubgradientWithinAt}
+        \leanok
+        \lean{HasSubgradientWithinAt}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{SubderivAt}
+        \leanok
+        \lean{SubderivAt}
+        \uses{HasSubgradientAt}
+                Subderiv of functions -
+    \end{definition}
+
+\begin{definition}\label{SubderivWithinAt}
+        \leanok
+        \lean{SubderivWithinAt}
+        \uses{HasSubgradientWithinAt}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{mem_SubderivAt}
+        \leanok
+        \lean{mem_SubderivAt}
+        \uses{HasSubgradientAt,SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{hasSubgradientWithinAt_univ}
+        \leanok
+        \lean{hasSubgradientWithinAt_univ}
+        \uses{HasSubgradientAt,HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientAt.hasSubgradientWithinAt}
+        \leanok
+        \lean{HasSubgradientAt.hasSubgradientWithinAt}
+        \uses{HasSubgradientAt,HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt_SubderivWithinAt}
+        \leanok
+        \lean{SubderivAt_SubderivWithinAt}
+        \uses{SubderivAt,SubderivWithinAt,hasSubgradientWithinAt_univ}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientAt_HasBanachSubgradientAt}
+        \leanok
+        \lean{HasSubgradientAt_HasBanachSubgradientAt}
+        \uses{Banach_HasSubgradientAt,HasSubgradientAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasBanachSubgradientAt_HasSubgradientAt}
+        \leanok
+        \lean{HasBanachSubgradientAt_HasSubgradientAt}
+        \uses{Banach_HasSubgradientAt,HasSubgradientAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientWithinAt_HasBanachSubgradientWithinAt}
+        \leanok
+        \lean{HasSubgradientWithinAt_HasBanachSubgradientWithinAt}
+        \uses{Banach_HasSubgradientAt,Banach_HasSubgradientWithinAt,HasSubgradientAt,HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasBanachSubgradientWithinAt_HasSubgradientWithinAt}
+        \leanok
+        \lean{HasBanachSubgradientWithinAt_HasSubgradientWithinAt}
+        \uses{Banach_HasSubgradientAt,Banach_HasSubgradientWithinAt,HasSubgradientAt,HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.congr}
+        \leanok
+        \lean{SubderivAt.congr}
+        \uses{SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt.congr}
+        \leanok
+        \lean{SubderivWithinAt.congr}
+        \uses{SubderivWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt.congr_of_mem}
+        \leanok
+        \lean{SubderivWithinAt.congr_of_mem}
+        \uses{SubderivWithinAt,SubderivWithinAt.congr}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.congr_mono}
+        \leanok
+        \lean{SubderivAt.congr_mono}
+        \uses{SubderivAt,SubderivWithinAt,SubderivAt.congr,SubderivWithinAt.congr}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt.Nonempty}
+        \leanok
+        \lean{SubderivWithinAt.Nonempty}
+        \uses{Banach_SubderivWithinAt,Banach_SubderivWithinAt.Nonempty,HasSubgradientWithinAt,SubderivWithinAt,HasBanachSubgradientWithinAt_HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.nonempty}
+        \leanok
+        \lean{SubderivAt.nonempty}
+        \uses{SubderivAt,SubderivWithinAt,SubderivAt_SubderivWithinAt,SubderivWithinAt.Nonempty}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.isClosed}
+        \leanok
+        \lean{SubderivAt.isClosed}
+        \uses{SubderivAt}
+                The subderiv of `f` at `x` is a closed set. -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt.isClosed}
+        \leanok
+        \lean{SubderivWithinAt.isClosed}
+        \uses{SubderivWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.convex}
+        \leanok
+        \lean{SubderivAt.convex}
+        \uses{SubderivAt}
+                The subderiv of `f` at `x` is a convex set. -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt.convex}
+        \leanok
+        \lean{SubderivWithinAt.convex}
+        \uses{SubderivWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{subgradientAt_mono}
+        \leanok
+        \lean{subgradientAt_mono}
+        \uses{SubderivAt}
+                Monotonicity of subderiv-
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt_eq_gradient}
+        \leanok
+        \lean{SubderivWithinAt_eq_gradient}
+        \uses{SubderivWithinAt,Convex_first_order_condition,Convex_first_order_condition'}
+                Subderiv of differentiable convex functions -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivWithinAt_eq_FDeriv}
+        \leanok
+        \lean{SubderivWithinAt_eq_FDeriv}
+        \uses{SubderivWithinAt,SubderivWithinAt_eq_gradient}
+                Alternarive version for FDeriv -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt_eq_gradient}
+        \leanok
+        \lean{SubderivAt_eq_gradient}
+        \uses{SubderivAt,SubderivWithinAt,SubderivAt_SubderivWithinAt,SubderivWithinAt_eq_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientAt_zero_of_isMinOn}
+        \leanok
+        \lean{HasSubgradientAt_zero_of_isMinOn}
+        \uses{HasSubgradientAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{isMinOn_of_HasSubgradentAt_zero}
+        \leanok
+        \lean{isMinOn_of_HasSubgradentAt_zero}
+        \uses{HasSubgradientAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientAt_zero_iff_isMinOn}
+        \leanok
+        \lean{HasSubgradientAt_zero_iff_isMinOn}
+        \uses{HasSubgradientAt,HasSubgradientAt_zero_of_isMinOn,isMinOn_of_HasSubgradentAt_zero}
+                `x'` minimize `f` if and only if `0` is a subgradient of `f` at `x'` -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientWithinAt_zero_of_isMinOn}
+        \leanok
+        \lean{HasSubgradientWithinAt_zero_of_isMinOn}
+        \uses{HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{isMinOn_of_HasSubgradentWithinAt_zero}
+        \leanok
+        \lean{isMinOn_of_HasSubgradentWithinAt_zero}
+        \uses{HasSubgradientWithinAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientWithinAt_zero_iff_isMinOn}
+        \leanok
+        \lean{HasSubgradientWithinAt_zero_iff_isMinOn}
+        \uses{HasSubgradientWithinAt,HasSubgradientWithinAt_zero_of_isMinOn,isMinOn_of_HasSubgradentWithinAt_zero}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasSubgradientAt.pos_smul}
+        \leanok
+        \lean{HasSubgradientAt.pos_smul}
+        \uses{HasSubgradientAt}
+                Multiplication by a Positive Scalar-
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.pos_smul}
+        \leanok
+        \lean{SubderivAt.pos_smul}
+        \uses{SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.add_subset}
+        \leanok
+        \lean{SubderivAt.add_subset}
+        \uses{SubderivAt,SubderivAt.add,continuous}
+                Subderivatives of the sum of two functions is a subset of the sum of the
+subderivatives of the two functions -
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt.add}
+        \leanok
+        \lean{SubderivAt.add}
+        \uses{HasSubgradientAt,SubderivAt,SubderivAt.add_subset,continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt_of_norm_at_zero}
+        \leanok
+        \lean{SubderivAt_of_norm_at_zero}
+        \uses{SubderivAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{SubderivAt_abs}
+        \leanok
+        \lean{SubderivAt_abs}
+        \uses{SubderivAt,SubderivAt_of_norm_at_zero}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{prox_prop}
+        \leanok
+        \lean{prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{prox_set}
+        \leanok
+        \lean{prox_set}
+        \uses{prox_prop}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{prox_point}
+        \leanok
+        \lean{prox_point}
+        \uses{prox_set}
+                No documentation.
+    \end{definition}
+
+\begin{lemma}\label{strongconvex_of_convex_add_sq}
+        \leanok
+        \lean{strongconvex_of_convex_add_sq}
+        \uses{continuous}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{bounded_lowersemicontinuous_to_epi_closed}
+        \leanok
+        \lean{bounded_lowersemicontinuous_to_epi_closed}
+        \uses{continuous}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_set_compact_of_lowersemi}
+        \leanok
+        \lean{prox_set_compact_of_lowersemi}
+        \uses{prox_prop,prox_set,bounded_lowersemicontinuous_to_epi_closed,IsCompact_isMinOn_of_isCompact_preimage,continuous,gradient_of_sq}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_set_compact_of_convex}
+        \leanok
+        \lean{prox_set_compact_of_convex}
+        \uses{HasSubgradientAt,SubderivAt,mem_SubderivAt,SubderivAt.nonempty,prox_prop,prox_set,bounded_lowersemicontinuous_to_epi_closed,IsCompact_isMinOn_of_isCompact_preimage,continuous,gradient_of_sq}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_well_define}
+        \leanok
+        \lean{prox_well_define}
+        \uses{prox_prop,prox_set,prox_set_compact_of_lowersemi,continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_well_define_convex}
+        \leanok
+        \lean{prox_well_define_convex}
+        \uses{prox_prop,prox_set,prox_set_compact_of_convex,prox_well_define}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_unique_of_convex}
+        \leanok
+        \lean{prox_unique_of_convex}
+        \uses{prox_prop,strongconvex_of_convex_add_sq,Strongly_Convex_Unique_Minima}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{prox_point_c}
+        \leanok
+        \lean{prox_point_c}
+        \uses{prox_set,prox_point,prox_well_define,continuous}
+                No documentation.
+    \end{definition}
+
+\begin{definition}\label{prox_point_c'}
+        \leanok
+        \lean{prox_point_c'}
+        \uses{prox_set,prox_point,prox_well_define,prox_well_define_convex,prox_point_c}
+                No documentation.
+    \end{definition}
+
+\begin{lemma}\label{convex_of_norm_sq}
+        \leanok
+        \lean{convex_of_norm_sq}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{Subderivat_eq_SubderivWithinAt_univ}
+        \leanok
+        \lean{Subderivat_eq_SubderivWithinAt_univ}
+        \uses{SubderivAt,SubderivWithinAt,mem_SubderivAt,hasSubgradientWithinAt_univ}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_iff_subderiv}
+        \leanok
+        \lean{prox_iff_subderiv}
+        \uses{HasSubgradientAt,SubderivAt,SubderivWithinAt,mem_SubderivAt,SubderivWithinAt_eq_gradient,HasSubgradientAt_zero_iff_isMinOn,SubderivAt.add,prox_prop,convex_of_norm_sq,Subderivat_eq_SubderivWithinAt_univ,continuous,gradient_of_sq}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_iff_grad}
+        \leanok
+        \lean{prox_iff_grad}
+        \uses{SubderivAt,SubderivWithinAt,SubderivWithinAt_eq_gradient,prox_prop,Subderivat_eq_SubderivWithinAt_univ,prox_iff_subderiv}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_iff_grad_smul}
+        \leanok
+        \lean{prox_iff_grad_smul}
+        \uses{SubderivWithinAt,SubderivWithinAt_eq_gradient,prox_prop,Subderivat_eq_SubderivWithinAt_univ,prox_iff_subderiv,prox_iff_grad,HasGradientAt.const_smul,HasGradientAt.const_smul'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{prox_iff_subderiv_smul}
+        \leanok
+        \lean{prox_iff_subderiv_smul}
+        \uses{HasSubgradientAt,SubderivAt,mem_SubderivAt,prox_prop,prox_iff_subderiv}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{proximal_shift}
+        \leanok
+        \lean{proximal_shift}
+        \uses{prox_prop}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{proximal_scale}
+        \leanok
+        \lean{proximal_scale}
+        \uses{prox_prop}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{proximal_add_linear}
+        \leanok
+        \lean{proximal_add_linear}
+        \uses{prox_prop}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{proximal_add_sq}
+        \leanok
+        \lean{proximal_add_sq}
+        \uses{prox_prop}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lipschitz_continuous_upper_bound
+}
+        \leanok
+        \lean{lipschitz_continuous_upper_bound
+}
+        \uses{continuous,deriv_function_comp_segment}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lipschitz_continuos_upper_bound'
+}
+        \leanok
+        \lean{lipschitz_continuos_upper_bound'
+}
+        \uses{continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lipschitz_minima_lower_bound}
+        \leanok
+        \lean{lipschitz_minima_lower_bound}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lipschitz_to_lnorm_sub_convex}
+        \leanok
+        \lean{lipschitz_to_lnorm_sub_convex}
+        \uses{monotone_gradient_convex',monotone_gradient_convex,gradient_norm_sq_eq_two_self,HasGradientAt.const_smul,HasGradientAt.neg}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{convex_to_lower}
+        \leanok
+        \lean{convex_to_lower}
+        \uses{first_order_convex,Convex_first_order_condition,Convex_first_order_condition',gradient_of_inner_const,gradient_of_const_mul_norm,HasGradientAt.sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lipschitz_to_lower}
+        \leanok
+        \lean{lipschitz_to_lower}
+        \uses{lipschitz_to_lnorm_sub_convex,convex_to_lower}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lower_to_lipschitz}
+        \leanok
+        \lean{lower_to_lipschitz}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lower_iff_lipschitz}
+        \leanok
+        \lean{lower_iff_lipschitz}
+        \uses{lipschitz_to_lower,lower_to_lipschitz}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lipshictz_iff_lnorm_sub_convex}
+        \leanok
+        \lean{lipshictz_iff_lnorm_sub_convex}
+        \uses{lipschitz_to_lnorm_sub_convex,convex_to_lower,lower_iff_lipschitz}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lower_iff_lnorm_sub_convex}
+        \leanok
+        \lean{lower_iff_lnorm_sub_convex}
+        \uses{lower_iff_lipschitz,lipshictz_iff_lnorm_sub_convex}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Strongly_Convex_Bound}
+        \leanok
+        \lean{Strongly_Convex_Bound}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{stronglyConvexOn_def}
+        \leanok
+        \lean{stronglyConvexOn_def}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Strongly_Convex_Unique_Minima}
+        \leanok
+        \lean{Strongly_Convex_Unique_Minima}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Strong_Convex_lower}
+        \leanok
+        \lean{Strong_Convex_lower}
+        \uses{Convex_monotone_gradient,Convex_monotone_gradient',sub_normsquare_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Lower_Strong_Convex}
+        \leanok
+        \lean{Lower_Strong_Convex}
+        \uses{monotone_gradient_convex',monotone_gradient_convex,sub_normsquare_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Strong_Convex_iff_lower}
+        \leanok
+        \lean{Strong_Convex_iff_lower}
+        \uses{Strong_Convex_lower,Lower_Strong_Convex}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Strong_Convex_second_lower}
+        \leanok
+        \lean{Strong_Convex_second_lower}
+        \uses{Convex_first_order_condition,Convex_first_order_condition',sub_normsquare_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_first_order_condition}
+        \leanok
+        \lean{Convex_first_order_condition}
+        \uses{HasFDeriv_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_first_order_condition_inverse}
+        \leanok
+        \lean{Convex_first_order_condition_inverse}
+        \uses{Convex_first_order_condition}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_first_order_condition_iff}
+        \leanok
+        \lean{Convex_first_order_condition_iff}
+        \uses{Convex_first_order_condition,Convex_first_order_condition_inverse}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_monotone_gradient}
+        \leanok
+        \lean{Convex_monotone_gradient}
+        \uses{Convex_first_order_condition}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_first_order_condition'}
+        \leanok
+        \lean{Convex_first_order_condition'}
+        \uses{Convex_first_order_condition}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_first_order_condition_inverse'}
+        \leanok
+        \lean{Convex_first_order_condition_inverse'}
+        \uses{Convex_first_order_condition,Convex_first_order_condition_inverse}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_first_order_condition_iff'}
+        \leanok
+        \lean{Convex_first_order_condition_iff'}
+        \uses{Convex_first_order_condition,Convex_first_order_condition_inverse,Convex_first_order_condition_iff,Convex_first_order_condition',Convex_first_order_condition_inverse'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convex_monotone_gradient'}
+        \leanok
+        \lean{Convex_monotone_gradient'}
+        \uses{Convex_monotone_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{monotone_gradient_convex'}
+        \leanok
+        \lean{monotone_gradient_convex'}
+        \uses{Convex_first_order_condition,Convex_first_order_condition_inverse,Convex_first_order_condition_inverse',monotone_gradient_convex,continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{monotone_gradient_iff_convex'}
+        \leanok
+        \lean{monotone_gradient_iff_convex'}
+        \uses{Convex_monotone_gradient,Convex_monotone_gradient',monotone_gradient_convex',monotone_gradient_convex}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{monotone_gradient_convex}
+        \leanok
+        \lean{monotone_gradient_convex}
+        \uses{monotone_gradient_convex'}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{montone_gradient_iff_convex}
+        \leanok
+        \lean{montone_gradient_iff_convex}
+        \uses{Convex_monotone_gradient,monotone_gradient_convex}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{monotone_gradient_strict_convex}
+        \leanok
+        \lean{monotone_gradient_strict_convex}
+        \uses{monotone_gradient_convex',monotone_gradient_convex,lagrange}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{strict_convex_monotone_gradient}
+        \leanok
+        \lean{strict_convex_monotone_gradient}
+        \uses{Convex_first_order_condition,Convex_monotone_gradient,Convex_first_order_condition',Convex_monotone_gradient',lagrange}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{strict_convex_iff_monotone_gradient
+}
+        \leanok
+        \lean{strict_convex_iff_monotone_gradient
+}
+        \uses{monotone_gradient_strict_convex,strict_convex_monotone_gradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{IsMinOn.of_isCompact_preimage}
+        \leanok
+        \lean{IsMinOn.of_isCompact_preimage}
+        \uses{continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{IsCompact_isMinOn_of_isCompact_preimage}
+        \leanok
+        \lean{IsCompact_isMinOn_of_isCompact_preimage}
+        \uses{IsMinOn.of_isCompact_preimage,continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}\label{strong_quasi}
+        \leanok
+        \lean{strong_quasi}
+                No documentation.
+    \end{definition}
+
+\begin{theorem}\label{isMinOn_unique}
+        \leanok
+        \lean{isMinOn_unique}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{ContinuousAt_Convergence}
+        \leanok
+        \lean{ContinuousAt_Convergence}
+        \uses{continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convergence_ContinuousAt}
+        \leanok
+        \lean{Convergence_ContinuousAt}
+        \uses{continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{ContinuousAt_iff_Convergence}
+        \leanok
+        \lean{ContinuousAt_iff_Convergence}
+        \uses{ContinuousAt_Convergence,Convergence_ContinuousAt}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{continuous}
+        \leanok
+        \lean{continuous}
+        \uses{ContinuousAt_iff_Convergence}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{deriv_function_comp_segment}
+        \leanok
+        \lean{deriv_function_comp_segment}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasFDeriv_Convergence}
+        \leanok
+        \lean{HasFDeriv_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convergence_HasFDeriv}
+        \leanok
+        \lean{Convergence_HasFDeriv}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasFDeriv_iff_Convergence_Point}
+        \leanok
+        \lean{HasFDeriv_iff_Convergence_Point}
+        \uses{HasFDeriv_Convergence,Convergence_HasFDeriv,HasFDeriv_iff_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasFDeriv_iff_Convergence}
+        \leanok
+        \lean{HasFDeriv_iff_Convergence}
+        \uses{HasFDeriv_Convergence,Convergence_HasFDeriv}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradient_Convergence}
+        \leanok
+        \lean{HasGradient_Convergence}
+        \uses{HasFDeriv_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Convergence_HasGradient}
+        \leanok
+        \lean{Convergence_HasGradient}
+        \uses{HasFDeriv_iff_Convergence_Point,HasFDeriv_iff_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradient_iff_Convergence_Point}
+        \leanok
+        \lean{HasGradient_iff_Convergence_Point}
+        \uses{HasGradient_Convergence,Convergence_HasGradient,HasGradient_iff_Convergence}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradient_iff_Convergence}
+        \leanok
+        \lean{HasGradient_iff_Convergence}
+        \uses{HasGradient_Convergence,Convergence_HasGradient}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_norm_sq_eq_two_self}
+        \leanok
+        \lean{gradient_norm_sq_eq_two_self}
+        \uses{Convergence_HasGradient}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_of_inner_const}
+        \leanok
+        \lean{gradient_of_inner_const}
+        \uses{HasGradient_iff_Convergence_Point,HasGradient_iff_Convergence}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_of_const_mul_norm}
+        \leanok
+        \lean{gradient_of_const_mul_norm}
+        \uses{gradient_norm_sq_eq_two_self,HasGradientAt.const_smul,HasGradientAt.const_smul'}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_of_sq}
+        \leanok
+        \lean{gradient_of_sq}
+        \uses{HasGradient_iff_Convergence_Point,HasGradient_iff_Convergence}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{sub_normsquare_gradient}
+        \leanok
+        \lean{sub_normsquare_gradient}
+        \uses{continuous,gradient_norm_sq_eq_two_self,HasGradientAt.const_smul,HasGradientAt.sub}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{gradient_continuous_of_contdiff}
+        \leanok
+        \lean{gradient_continuous_of_contdiff}
+        \uses{continuous,expansion}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{expansion}
+        \leanok
+        \lean{expansion}
+        \uses{continuous}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{general_expansion}
+        \leanok
+        \lean{general_expansion}
+        \uses{continuous,expansion}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{lagrange}
+        \leanok
+        \lean{lagrange}
+        \uses{continuous,expansion}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{Vert_abs}
+        \leanok
+        \lean{Vert_abs}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{Vert_div}
+        \leanok
+        \lean{Vert_div}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{Simplifying₁}
+        \leanok
+        \lean{Simplifying₁}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{Simplifying₂}
+        \leanok
+        \lean{Simplifying₂}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{div_div_mul}
+        \leanok
+        \lean{div_div_mul}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.one_div}
+        \leanok
+        \lean{HasGradientAt.one_div}
+        \uses{ContinuousAt_Convergence,continuous,HasGradient_iff_Convergence_Point,HasGradient_iff_Convergence,Vert_div,Simplifying₁,Simplifying₂,div_div_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.comp
+}
+        \leanok
+        \lean{HasGradientAtFilter.comp
+}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.comp
+}
+        \leanok
+        \lean{HasGradientWithinAt.comp
+}
+        \uses{continuous}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.comp_hasGradientWithinAt
+}
+        \leanok
+        \lean{HasGradientAt.comp_hasGradientWithinAt
+}
+        \uses{continuous,HasGradientAt.comp}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.comp_of_mem
+}
+        \leanok
+        \lean{HasGradientWithinAt.comp_of_mem
+}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.comp}
+        \leanok
+        \lean{HasGradientAt.comp}
+        \uses{continuous}
+                The chain rule.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient.comp}
+        \leanok
+        \lean{gradient.comp}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.const_smul}
+        \leanok
+        \lean{HasGradientAtFilter.const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.const_smul}
+        \leanok
+        \lean{HasGradientWithinAt.const_smul}
+        \uses{HasGradientAtFilter.const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.const_smul}
+        \leanok
+        \lean{HasGradientAt.const_smul}
+        \uses{HasGradientAtFilter.const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_const_smul}
+        \leanok
+        \lean{gradient_const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.const_smul'}
+        \leanok
+        \lean{HasGradientAtFilter.const_smul'}
+        \uses{HasGradientAtFilter.const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.const_smul'}
+        \leanok
+        \lean{HasGradientWithinAt.const_smul'}
+        \uses{HasGradientWithinAt.const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.const_smul'}
+        \leanok
+        \lean{HasGradientAt.const_smul'}
+        \uses{HasGradientAt.const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_const_smul'}
+        \leanok
+        \lean{gradient_const_smul'}
+        \uses{gradient_const_smul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.add}
+        \leanok
+        \lean{HasGradientAtFilter.add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.add}
+        \leanok
+        \lean{HasGradientWithinAt.add}
+        \uses{HasGradientAtFilter.add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.add}
+        \leanok
+        \lean{HasGradientAt.add}
+        \uses{HasGradientAtFilter.add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_add}
+        \leanok
+        \lean{gradient_add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.add_const}
+        \leanok
+        \lean{HasGradientAtFilter.add_const}
+        \uses{HasGradientAtFilter.add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.add_const}
+        \leanok
+        \lean{HasGradientWithinAt.add_const}
+        \uses{HasGradientAtFilter.add,HasGradientWithinAt.add,HasGradientAtFilter.add_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.add_const}
+        \leanok
+        \lean{HasGradientAt.add_const}
+        \uses{HasGradientAtFilter.add,HasGradientAt.add,HasGradientAtFilter.add_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_add_const}
+        \leanok
+        \lean{gradient_add_const}
+        \uses{gradient_add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.const_add}
+        \leanok
+        \lean{HasGradientAtFilter.const_add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.const_add}
+        \leanok
+        \lean{HasGradientWithinAt.const_add}
+        \uses{HasGradientAtFilter.const_add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.const_add}
+        \leanok
+        \lean{HasGradientAt.const_add}
+        \uses{HasGradientAtFilter.const_add}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Gradient_const_add}
+        \leanok
+        \lean{Gradient_const_add}
+        \uses{gradient_add,gradient_add_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.sum}
+        \leanok
+        \lean{HasGradientAtFilter.sum}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.sum}
+        \leanok
+        \lean{HasGradientWithinAt.sum}
+        \uses{HasGradientAtFilter.sum}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.sum}
+        \leanok
+        \lean{HasGradientAt.sum}
+        \uses{HasGradientAtFilter.sum}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_sum}
+        \leanok
+        \lean{gradient_sum}
+        \uses{HasGradientAt.sum}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.neg}
+        \leanok
+        \lean{HasGradientAtFilter.neg}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.neg}
+        \leanok
+        \lean{HasGradientWithinAt.neg}
+        \uses{HasGradientAtFilter.neg}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.neg}
+        \leanok
+        \lean{HasGradientAt.neg}
+        \uses{HasGradientAtFilter.neg}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_neg}
+        \leanok
+        \lean{gradient_neg}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.sub}
+        \leanok
+        \lean{HasGradientAtFilter.sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.sub}
+        \leanok
+        \lean{HasGradientWithinAt.sub}
+        \uses{HasGradientAtFilter.sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.sub}
+        \leanok
+        \lean{HasGradientAt.sub}
+        \uses{HasGradientAtFilter.sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_sub}
+        \leanok
+        \lean{gradient_sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.sub_const}
+        \leanok
+        \lean{HasGradientAtFilter.sub_const}
+        \uses{HasGradientAtFilter.sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.sub_const}
+        \leanok
+        \lean{HasGradientWithinAt.sub_const}
+        \uses{HasGradientAtFilter.sub,HasGradientWithinAt.sub,HasGradientAtFilter.sub_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.sub_const}
+        \leanok
+        \lean{HasGradientAt.sub_const}
+        \uses{HasGradientAtFilter.sub,HasGradientAt.sub,HasGradientAtFilter.sub_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{Gradient_sub_const}
+        \leanok
+        \lean{Gradient_sub_const}
+        \uses{gradient_add,gradient_add_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAtFilter.const_sub}
+        \leanok
+        \lean{HasGradientAtFilter.const_sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.const_sub}
+        \leanok
+        \lean{HasGradientWithinAt.const_sub}
+        \uses{HasGradientAtFilter.const_sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.const_sub}
+        \leanok
+        \lean{HasGradientAt.const_sub}
+        \uses{HasGradientAtFilter.const_sub}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_const_sub}
+        \leanok
+        \lean{gradient_const_sub}
+        \uses{gradient_add,gradient_add_const,gradient_neg}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{equiv_lemma_mul}
+        \leanok
+        \lean{equiv_lemma_mul}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.mul}
+        \leanok
+        \lean{HasGradientAt.mul}
+        \uses{equiv_lemma_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.mul}
+        \leanok
+        \lean{HasGradientWithinAt.mul}
+        \uses{equiv_lemma_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_mul}
+        \leanok
+        \lean{gradient_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.mul'}
+        \leanok
+        \lean{HasGradientAt.mul'}
+        \uses{HasGradientAt.mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.mul'}
+        \leanok
+        \lean{HasGradientWithinAt.mul'}
+        \uses{HasGradientWithinAt.mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_mul'}
+        \leanok
+        \lean{gradient_mul'}
+        \uses{gradient_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{equiv_lemma_mul_const}
+        \leanok
+        \lean{equiv_lemma_mul_const}
+        \uses{equiv_lemma_mul}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.mul_const}
+        \leanok
+        \lean{HasGradientWithinAt.mul_const}
+        \uses{equiv_lemma_mul,HasGradientWithinAt.mul,equiv_lemma_mul_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.mul_const}
+        \leanok
+        \lean{HasGradientAt.mul_const}
+        \uses{equiv_lemma_mul,HasGradientAt.mul,equiv_lemma_mul_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_mul_const}
+        \leanok
+        \lean{gradient_mul_const}
+        \uses{gradient_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}\label{equiv_lemma_const_mul}
+        \leanok
+        \lean{equiv_lemma_const_mul}
+                No documentation.
+    \end{lemma}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.const_mul}
+        \leanok
+        \lean{HasGradientWithinAt.const_mul}
+        \uses{equiv_lemma_const_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.const_mul}
+        \leanok
+        \lean{HasGradientAt.const_mul}
+        \uses{equiv_lemma_const_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_const_mul}
+        \leanok
+        \lean{gradient_const_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.mul_const'}
+        \leanok
+        \lean{HasGradientWithinAt.mul_const'}
+        \uses{HasGradientWithinAt.mul,HasGradientWithinAt.mul_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.mul_const'}
+        \leanok
+        \lean{HasGradientAt.mul_const'}
+        \uses{HasGradientAt.mul,HasGradientAt.mul_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_mul_const'}
+        \leanok
+        \lean{gradient_mul_const'}
+        \uses{gradient_mul,gradient_mul_const}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientWithinAt.const_mul'}
+        \leanok
+        \lean{HasGradientWithinAt.const_mul'}
+        \uses{HasGradientWithinAt.const_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{HasGradientAt.const_mul'}
+        \leanok
+        \lean{HasGradientAt.const_mul'}
+        \uses{HasGradientAt.const_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}\label{gradient_const_mul'}
+        \leanok
+        \lean{gradient_const_mul'}
+        \uses{gradient_const_mul}
+                No documentation.
+    \end{theorem}
+
+\begin{proof}
+    \leanok
+\end{proof}
 
