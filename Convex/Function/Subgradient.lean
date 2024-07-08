@@ -9,8 +9,8 @@ import Mathlib.Order.Filter.Extr
 import Mathlib.Analysis.Calculus.Gradient.Basic
 import Mathlib.Analysis.Calculus.LineDeriv.Basic
 import Mathlib.Data.Real.Sign
-import Convex.Function.Banach_Subgradient
-import Convex.Function.Convex_Function
+import Convex.Function.BanachSubgradient
+import Convex.Function.ConvexFunction
 
 /-!
 # Subgradient of convex functions
@@ -135,11 +135,11 @@ section congr
 variable {f₁ f₂ : E → ℝ} {t s : Set E}
 
 theorem SubderivAt.congr (h : f₁ = f₂) : SubderivAt f₁ x = SubderivAt f₂ x := by
-  congr; ext g; rw [h]
+  ext g; rw [h]
 
 theorem SubderivWithinAt.congr (h : ∀ y ∈ s, f₁ y = f₂ y) (hf : f₁ x = f₂ x):
     SubderivWithinAt f₁ s x = SubderivWithinAt f₂ s x := by
-  congr; ext g;
+  ext g
   exact ⟨fun hg y ys => by rw [← h y ys, ← hf]; exact hg y ys,
             fun hg y ys => by rw [h y ys, hf]; exact hg y ys⟩
 
@@ -158,7 +158,7 @@ section Basic_properties
 
 variable {E : Type*} [NormedAddCommGroup E] [InnerProductSpace ℝ E] [CompleteSpace E]
 
-variable {f : E → ℝ} {g : E} {x : E} {s : Set E}
+variable {f : E → ℝ} {g : E} {x y : E} {s : Set E}
 
 variable (hf : ConvexOn ℝ s f) (hc : ContinuousOn f (interior s))
 

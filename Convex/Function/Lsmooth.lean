@@ -6,7 +6,8 @@ Authors: Chenyi Li, Ziyu Wang, Yuxuan Wu, Junda Ying,
 -/
 import Mathlib.Topology.EMetricSpace.Lipschitz
 import Mathlib.Analysis.Calculus.Deriv.Pow
-import Convex.Optimality.Optimality_Condition_of_Unconstrained_Problem
+import Convex.Optimality.OptimalityConditionOfUnconstrainedProblem
+import Convex.Analysis.Lemmas
 
 /-!
 # Lsmooth
@@ -110,7 +111,7 @@ theorem lipschitz_continuous_upper_bound
         simp only [gt_iff_lt, zero_lt_two, not_true, ge_iff_le, Set.mem_Ico] at ht; linarith
       apply H₃ t s₁
   specialize H₄ (1 : ℝ) (Set.mem_Icc.mpr (by norm_num))
-  have H₅ : g 1 = f y := by simp [g]
+  have H₅ : g 1 = f y := by simp only [g, one_smul, add_sub_cancel]
   have H₆ : g 0 = f x := by simp only [g, zero_smul, add_zero]
   have H₇ : upperf 1 = g 0 + g' 0 + LL / 2 := by simp [upperf, g, g', LL]
   have T₁ : g' 0 = f' x (y - x) := by simp only [g', map_sub, zero_smul, add_zero]
@@ -300,7 +301,6 @@ theorem convex_to_lower {l : ℝ} (h₁ : ∀ x : E, HasGradientAt f (f' x) x)
           inner (f' s) z₁ + inner (l • z₁ - fs' s z₁) (z₂ - z₁)) := by apply t₁₁
       _ = l / 2 * ‖z₂‖ ^ 2 -(l / 2 * ‖z₁‖ ^ 2 - f z₁ + inner (f' s) z₁ +
         (l * (inner z₁ z₂ - ‖z₁‖ ^ 2) - inner (f' z₁ - f' s) (z₂ - z₁))) := by
-        repeat rw [Real.rpow_two, ← real_inner_self_eq_norm_sq]
         rw [inner_sub_left, inner_smul_left]
         simp; rw [inner_sub_right, real_inner_self_eq_norm_sq];left ; simp
       _ = f z₁ - inner (f' s) z₁ + inner (f' z₁ - f' s) (z₂ - z₁) +

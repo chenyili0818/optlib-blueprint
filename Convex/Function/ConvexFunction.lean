@@ -6,8 +6,8 @@ Authors: Chenyi Li, Ziyu Wang, Penghao Yu, Zhipeng Cao, Shengyang Xu, Zaiwen Wen
 
 import Mathlib.Analysis.Convex.Function
 import Mathlib.Analysis.Calculus.MeanValue
-import Basic.Analysis.Calculation
-import Basic.Analysis.Lemmas
+import Convex.Analysis.Calculation
+import Convex.Analysis.Lemmas
 
 set_option linter.unusedVariables false
 
@@ -40,7 +40,7 @@ section FirstOrderCondition
 
 variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
 
-variable {f : E → ℝ} {f' : E → (E →L[ℝ] ℝ)} {x y x': E}
+variable {f : E → ℝ} {f' : E → (E →L[ℝ] ℝ)} {x y x': E} {s : Set E}
 
 private lemma point_proportion {a b: ℝ} (_ : 0 ≤ a) (_ : 0 ≤ b) (sumab: a + b = 1)
   (hpoint : x' = a • x + b • y) :  x - x' =  b • (x - y) := by
@@ -215,7 +215,7 @@ open Set InnerProductSpace
 
 variable {E : Type*} [NormedAddCommGroup E] [InnerProductSpace ℝ E] [CompleteSpace E]
 
-variable {f : E → ℝ} {f' : E → E} {s : Set E}
+variable {f : E → ℝ} {f' : E → E} {s : Set E} {x : E}
 
 theorem Convex_first_order_condition' (h : HasGradientAt f (f' x) x) (hf : ConvexOn ℝ s f)
     (xs : x ∈ s) : ∀ (y : E), y ∈ s → f x + inner (f' x) (y - x) ≤ f y := by

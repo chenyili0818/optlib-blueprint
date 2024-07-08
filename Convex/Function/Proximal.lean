@@ -8,7 +8,7 @@ import Mathlib.Analysis.Convex.Basic
 import Convex.Function.Subgradient
 import Convex.Function.Lsmooth
 import Convex.Function.StronglyConvex
-import Convex.Function.Minima_ClosedFunction
+import Convex.Function.MinimaClosedFunction
 
 set_option linter.unusedVariables false
 

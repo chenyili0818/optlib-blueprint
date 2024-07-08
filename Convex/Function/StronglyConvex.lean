@@ -5,9 +5,8 @@ Authors: Chenyi Li, Ziyu Wang
 -/
 import Mathlib.Analysis.InnerProductSpace.PiL2
 import Mathlib.Analysis.Convex.Strong
-import Convex.Analysis.Calculation
 import Convex.Function.Lsmooth
-import Convex.Function.Convex_Function
+
 /-!
   the properties of strongly convex function and gradient descent method
   for strongly convex function

@@ -1,8 +1,23 @@
-import Function.Proximal
+/-
+Copyright (c) 2024 Yuxuan Wu, Chenyi Li. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Yuxuan Wu, Chenyi Li
+-/
 import Mathlib.Analysis.NormedSpace.Star.Matrix
 import Mathlib.LinearAlgebra.Matrix.DotProduct
-import Algorithm.ProximalGradient
+import Convex.Algorithm.ProximalGradient
 
+set_option linter.unusedVariables false
+
+/-!
+# LASSO
+
+## Main results
+
+  This file mainly concentrates on the definition and the proof of the convergence rate
+  of the Lasso problem using proximal gradient method.
+
+-/
 section property
 
 variable {n m : ℕ+} {t μ : ℝ}
@@ -136,7 +151,8 @@ theorem affine_sq_gradient :  ∀ x : (EuclideanSpace ℝ (Fin n)),
     rw [inv_mul_cancel, one_mul]
     simp
   have φ'eq : φ' = fun x : (EuclideanSpace ℝ (Fin n)) => f' x - h' x := by
-    ext y z; simp [φ', f', h']; rw [mulVec_sub Aᵀ]; simp
+    ext y z; simp [φ', f', h']
+    rw [Matrix.mulVec_sub Aᵀ]; simp
   show HasGradientAt φ (φ' x) x
   rw [φeq, φ'eq]
   apply HasGradientAt.add_const
@@ -264,6 +280,11 @@ theorem norm_one_proximal
     rw [aux2] at aux; linarith [aux]
     push_neg; intro hxm'; contrapose! hxm'; exact hxm
 
+lemma Transpose_mul_self_eq_zero {A : Matrix (Fin m) (Fin n) ℝ} : Aᵀ * A = 0 ↔ A = 0 :=
+  ⟨fun h => Matrix.ext fun i j =>
+      (congr_fun <| dotProduct_self_eq_zero.1 <| Matrix.ext_iff.2 h j j) i,
+    fun h => h ▸ Matrix.mul_zero _⟩
+
 end property
 
 noncomputable section LASSO
@@ -360,25 +381,22 @@ instance {A : Matrix (Fin m) (Fin n) ℝ} {b : (Fin m) → ℝ} {μ : ℝ} {μpo
   tpos : 0 < p.t := by
     rw [p.teq]; simp
     rw [p.Leq]; simp
-    have aux : Aᴴ * A = 0 ↔ A = 0 := Matrix.conjTranspose_mul_self_eq_zero
-    simp at aux; rw [← not_iff_not] at aux
-    rw [aux]; exact Ane0
+    rw [Transpose_mul_self_eq_zero]
+    exact Ane0
   step : p.t ≤ 1 / p.L := by rw [p.teq]
   ori : p.x 0 = x₀ := p.ori
   hL : p.L > (0 : ℝ) := by
     rw [p.Leq]; simp
-    have aux : Aᴴ * A = 0 ↔ A = 0 := Matrix.conjTranspose_mul_self_eq_zero
-    simp at aux; rw [← not_iff_not] at aux
-    rw [aux]; exact Ane0
+    rw [Transpose_mul_self_eq_zero]
+    exact Ane0
   update : ∀ (k : ℕ), prox_prop (p.t • p.h) (p.x k - p.t • p.f' (p.x k)) (p.x (k + 1)) := by
     intro k
     apply norm_one_proximal
     · rw [p.heq]
     · rw [p.teq]; simp
       rw [p.Leq]; simp
-      have aux : Aᴴ * A = 0 ↔ A = 0 := Matrix.conjTranspose_mul_self_eq_zero
-      simp at aux; rw [← not_iff_not] at aux
-      rw [aux]; exact Ane0
+      rw [Transpose_mul_self_eq_zero]
+      exact Ane0
     · linarith
     · intro i; rw [p.update2 k, p.update1 k]
 
